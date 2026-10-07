@@ -1,0 +1,42 @@
+{
+  "system": "Centralized Campus Tracking and Archival System",
+  "version": "1.0",
+  "roles": {
+    "Administrator": {
+      "dashboard": "admin.dashboard",
+      "focus": "System control and account management",
+      "actions": ["users.index", "theses.index", "theses.archive"],
+      "permissions": ["manage users", "view all theses", "assign reviewers", "change status", "archive records", "restore records"]
+    },
+    "Staff": {
+      "dashboard": "staff.dashboard",
+      "focus": "Submission operations and records maintenance",
+      "actions": ["theses.index", "theses.archive"],
+      "permissions": ["view theses", "review theses", "change status", "archive records", "restore records"]
+    },
+    "Thesis Coordinator": {
+      "dashboard": "coordinator.dashboard",
+      "focus": "Review workflow coordination",
+      "actions": ["theses.index", "theses.archive"],
+      "permissions": ["view theses", "assign reviewers", "change status", "archive records", "restore records"]
+    },
+    "Faculty Adviser": {
+      "dashboard": "adviser.dashboard",
+      "focus": "Adviser feedback and assigned research",
+      "actions": ["theses.index", "theses.archive"],
+      "permissions": ["view assigned theses", "review assigned theses", "upload revisions"]
+    },
+    "Panel Member": {
+      "dashboard": "panel.dashboard",
+      "focus": "Panel review and recommendations",
+      "actions": ["theses.index", "theses.archive"],
+      "permissions": ["view assigned theses", "review assigned theses", "submit feedback"]
+    },
+    "Student": {
+      "dashboard": "student.dashboard",
+      "focus": "Proposal submission and progress tracking",
+      "actions": ["theses.create", "theses.index"],
+      "permissions": ["create thesis", "view own theses", "upload revisions", "track status"]
+    }
+  }
+}
